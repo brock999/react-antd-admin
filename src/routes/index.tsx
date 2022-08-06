@@ -8,6 +8,7 @@ import { useRoutes } from 'react-router-dom';
 
 const NotFound = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/404'));
 const Documentation = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/doucumentation'));
+const Tree = lazy(() => import(/* webpackChunkName: "404'"*/ '@/pages/tree'));
 const Guide = lazy(() => import(/* webpackChunkName: "guide'"*/ '@/pages/guide'));
 const RoutePermission = lazy(() => import(/* webpackChunkName: "route-permission"*/ '@/pages/permission/route'));
 const FormPage = lazy(() => import(/* webpackChunkName: "form'"*/ '@/pages/components/form'));
@@ -44,6 +45,10 @@ const routeList: RouteObject[] = [
       {
         path: 'documentation',
         element: <WrapperRouteComponent element={<Documentation />} titleId="title.documentation" />,
+      },
+      {
+        path: 'tree',
+        element: <WrapperRouteComponent element={<Tree />} titleId="tree" />,
       },
       {
         path: 'guide',
